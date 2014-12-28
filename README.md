@@ -1,21 +1,14 @@
-# nodeinit
+# PushNotification Adapter for Node-Linda
 
-![](https://travis-ci.org/geta6/nodeinit.png?branch=master)
+under developments
 
-node_moduleを開発し始めるためのベース
+## usage
 
-# usage
+```
+Adapter = require 'linda-pushnotificaiton-adpater'
 
-    $ git clone https://github.com/geta6/nodeinit
-    $ cd nodeinit
-    $ npm i
-    $ npm i -g grunt-cli
-    $ grunt
+Linda = require('linda').Client
 
-# tasks
-
-* lint coffee
-* build coffee (`src` to `lib`, recursive)
-* mocha test (`tests/test.coffee`)
-* watching file changes
-* failure notification
+adapter = new Adapter().connect 'http://YOUR_LINDA_HOST'
+linda = new Linda().connect adapter
+```
